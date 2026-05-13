@@ -1,3 +1,21 @@
 spring:
   application:
     name: orderService
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: notificart
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/master/protocol/openid-connect/certs
+
+kafka:
+  url: localhost:9092
+  topic: notification-service
+
+server:
+  port: 8081

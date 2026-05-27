@@ -2,10 +2,14 @@ package farcic.dev.orderService.config;
 
 import farcic.dev.orderService.entity.enums.OrderEvent;
 import farcic.dev.orderService.entity.enums.OrderStatus;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.statemachine.config.EnableStateMachine;
 import org.springframework.statemachine.config.StateMachineConfigurerAdapter;
 import org.springframework.statemachine.config.builders.StateMachineStateConfigurer;
 import org.springframework.statemachine.config.builders.StateMachineTransitionConfigurer;
 
+@Configuration
+@EnableStateMachine
 public class OrderStateMachineConfig extends StateMachineConfigurerAdapter<OrderStatus, OrderEvent> {
 
     @Override

@@ -19,7 +19,6 @@ public class Order {
     private String id;
 
     private String customerId;
-
     // a basket contem os produtos
     private String basketId;
 

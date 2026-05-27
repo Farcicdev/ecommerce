@@ -2,6 +2,7 @@ package farcic.dev.orderService.mapper;
 
 import farcic.dev.orderService.dto.reponse.OrderResponse;
 import farcic.dev.orderService.dto.request.OrderCreateRequest;
+import farcic.dev.orderService.dto.request.UpdateOrderRequest;
 import farcic.dev.orderService.entity.Order;
 import org.springframework.stereotype.Component;
 
@@ -25,6 +26,12 @@ public class OrderMapper {
                 .totalAmount(order.totalAmount())
                 .status(order.getStatus())
                 .paymentMethod(order.getPaymentMethod())
+                .build();
+    }
+
+    public Order toUptadeOrder(UpdateOrderRequest request){
+        return Order.builder()
+                .id(request.orderId())
                 .build();
     }
 

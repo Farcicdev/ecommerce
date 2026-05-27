@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-@Document(collation = "orders")
+@Document(collection = "orders")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
